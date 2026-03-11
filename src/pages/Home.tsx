@@ -4,6 +4,7 @@ import { Heart, Award, Leaf, Truck } from "lucide-react";
 import { categories } from "@/data/categories";
 import CategoryCard from "@/components/CategoryCard";
 import heroBg from "@/assets/hero-bg.jpg";
+import logo from "@/assets/logo.jpeg";
 
 const reasons = [
   { icon: Leaf, title: "100% Wholesome", desc: "Made with natural, healthy ingredients — no preservatives." },
