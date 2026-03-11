@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Heart, Award, Leaf, Truck } from "lucide-react";
+import { Heart, Award, Leaf, Truck, Cake, UtensilsCrossed, MapPin, Sparkles } from "lucide-react";
 import { categories } from "@/data/categories";
 import CategoryCard from "@/components/CategoryCard";
 import heroBg from "@/assets/hero-bg.jpg";
 import logo from "@/assets/logo.jpeg";
+import insta1 from "@/assets/insta-1.jpg";
+import insta2 from "@/assets/insta-2.jpg";
+import insta3 from "@/assets/insta-3.jpg";
+import insta4 from "@/assets/insta-4.jpg";
+import insta5 from "@/assets/insta-5.jpg";
+import insta6 from "@/assets/insta-6.jpg";
 
 const reasons = [
   { icon: Leaf, title: "100% Wholesome", desc: "Made with natural, healthy ingredients — no preservatives." },
@@ -13,39 +19,90 @@ const reasons = [
   { icon: Truck, title: "Timely Delivery", desc: "Fresh from our kitchen to your doorstep, always on time." },
 ];
 
+const heroHighlights = [
+  { icon: Cake, text: "Custom Cakes & Desserts" },
+  { icon: Leaf, text: "Fresh, Natural Ingredients" },
+  { icon: UtensilsCrossed, text: "Homemade Quality" },
+  { icon: MapPin, text: "Local Delivery Available" },
+];
+
+const instaImages = [
+  { src: insta1, alt: "Chocolate drip cake with berries" },
+  { src: insta2, alt: "Homemade chocolate chip cookies" },
+  { src: insta3, alt: "Elegant dessert gift box" },
+  { src: insta4, alt: "Healthy millet muffins" },
+  { src: insta5, alt: "Dessert table setup" },
+  { src: insta6, alt: "Festive hamper with sweets" },
+];
+
 const Home = () => {
   return (
     <div>
       {/* Hero */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-hero" />
-        <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <motion.img
             src={logo}
             alt="Shannie's Kitchen"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="h-32 md:h-44 w-auto rounded-2xl shadow-bakery mx-auto mb-6"
+            className="h-28 md:h-36 w-auto rounded-full mx-auto mb-6 drop-shadow-2xl"
+            style={{ mixBlendMode: "screen" }}
           />
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-lg md:text-xl text-primary-foreground/80 font-body tracking-wide mb-8"
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="text-sm md:text-base uppercase tracking-[0.3em] text-primary-foreground/70 font-body mb-3"
           >
             Healthy Kitchen • Wholesome Treats
           </motion.p>
-          <motion.div
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.35, duration: 0.6 }}
+            className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-5 leading-tight"
+          >
+            Wholesome Desserts,{" "}
+            <span className="text-green-light italic">Crafted with Care</span>
+          </motion.h1>
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
+            className="text-base md:text-lg text-primary-foreground/80 font-body max-w-2xl mx-auto mb-8 leading-relaxed"
+          >
+            From custom celebration cakes to guilt-free healthy bakes, we bring you handcrafted treats 
+            made with the finest natural ingredients — delivered fresh from our Miyapur kitchen.
+          </motion.p>
+
+          {/* Feature highlights */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.65, duration: 0.6 }}
+            className="flex flex-wrap justify-center gap-3 md:gap-5 mb-10"
+          >
+            {heroHighlights.map((h) => (
+              <div key={h.text} className="flex items-center gap-2 bg-card/10 backdrop-blur-sm border border-primary-foreground/15 rounded-full px-4 py-2">
+                <h.icon className="h-4 w-4 text-green-light" />
+                <span className="text-xs md:text-sm text-primary-foreground/90 font-body">{h.text}</span>
+              </div>
+            ))}
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link
               to="/categories"
-              className="bg-primary text-primary-foreground px-8 py-3 rounded-full font-body font-medium hover:bg-green-dark transition-colors shadow-bakery"
+              className="bg-primary text-primary-foreground px-8 py-3.5 rounded-full font-body font-medium hover:bg-green-dark transition-colors shadow-bakery-lg text-base"
             >
               Explore Our Treats
             </Link>
@@ -53,7 +110,7 @@ const Home = () => {
               href="https://wa.me/919959555466?text=Hello%20Shannies%20Kitchen!"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-card/20 backdrop-blur-sm text-primary-foreground border border-primary-foreground/30 px-8 py-3 rounded-full font-body font-medium hover:bg-card/30 transition-colors"
+              className="bg-card/15 backdrop-blur-sm text-primary-foreground border border-primary-foreground/25 px-8 py-3.5 rounded-full font-body font-medium hover:bg-card/25 transition-colors text-base"
             >
               Order via WhatsApp
             </a>
@@ -128,24 +185,42 @@ const Home = () => {
       {/* Instagram Preview */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Follow Us on Instagram</h2>
-          <p className="text-muted-foreground mb-8">See our latest creations @shannies_kitchen</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto">
-            {categories.slice(0, 4).map((cat) => (
-              <a
-                key={cat.id}
-                href="https://www.instagram.com/shannies_kitchen/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="aspect-square rounded-lg overflow-hidden group"
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <Sparkles className="h-6 w-6 text-gold mx-auto mb-3" />
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
+              Follow Us on Instagram
+            </h2>
+            <p className="text-muted-foreground mb-2">See our latest creations</p>
+            <a
+              href="https://www.instagram.com/shannies_kitchen/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-primary font-body font-semibold hover:underline mb-10 text-lg"
+            >
+              @shannies_kitchen →
+            </a>
+          </motion.div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            {instaImages.map((img, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="aspect-square rounded-xl overflow-hidden shadow-bakery"
               >
                 <img
-                  src={cat.image}
-                  alt={cat.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
-              </a>
+              </motion.div>
             ))}
           </div>
         </div>
