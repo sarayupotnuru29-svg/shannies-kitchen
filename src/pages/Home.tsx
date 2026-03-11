@@ -4,6 +4,7 @@ import { Heart, Award, Leaf, Truck } from "lucide-react";
 import { categories } from "@/data/categories";
 import CategoryCard from "@/components/CategoryCard";
 import heroBg from "@/assets/hero-bg.jpg";
+import logo from "@/assets/logo.jpeg";
 
 const reasons = [
   { icon: Leaf, title: "100% Wholesome", desc: "Made with natural, healthy ingredients — no preservatives." },
@@ -20,14 +21,14 @@ const Home = () => {
         <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
-          <motion.h1
+          <motion.img
+            src={logo}
+            alt="Shannie's Kitchen"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="font-display text-5xl md:text-7xl font-bold text-primary-foreground mb-4"
-          >
-            Shannie's Kitchen
-          </motion.h1>
+            className="h-32 md:h-44 w-auto rounded-2xl shadow-bakery mx-auto mb-6"
+          />
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
