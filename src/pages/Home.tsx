@@ -42,15 +42,6 @@ const Home = () => {
         <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <motion.img
-            src={logo}
-            alt="Shannie's Kitchen"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="h-28 md:h-36 w-auto rounded-full mx-auto mb-6 drop-shadow-2xl"
-            style={{ mixBlendMode: "screen" }}
-          />
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -63,19 +54,27 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.6 }}
-            className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-5 leading-tight"
+            className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-2 leading-tight"
           >
-            Wholesome Desserts,{" "}
-            <span className="text-green-light italic">Crafted with Care</span>
+            Shannie's Kitchen
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
+            transition={{ delay: 0.45, duration: 0.6 }}
+            className="font-display text-xl md:text-2xl text-primary-foreground/90 mb-5 leading-tight whitespace-nowrap"
+          >
+            Wholesome Desserts, <span className="text-green-light italic">Crafted with Care</span>
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.55, duration: 0.6 }}
             className="text-base md:text-lg text-primary-foreground/80 font-body max-w-2xl mx-auto mb-8 leading-relaxed"
           >
-            From custom celebration cakes to guilt-free healthy bakes, we bring you handcrafted treats 
-            made with the finest natural ingredients — delivered fresh from our Miyapur kitchen.
+            From custom celebration cakes to guilt-free healthy bakes,
+            <br className="hidden md:block" />
+            we bring you handcrafted treats made with the finest natural ingredients — delivered fresh from our Miyapur kitchen.
           </motion.p>
 
           {/* Feature highlights */}
