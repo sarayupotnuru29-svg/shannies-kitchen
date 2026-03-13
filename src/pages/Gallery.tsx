@@ -1,21 +1,14 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { categories, galleryItems } from "@/data/categories";
+import { allGalleryImages } from "@/data/galleryImages";
 
 const filters = ["All", "Cakes", "Healthy", "Hampers", "Corporate", "Events"];
 
 const Gallery = () => {
   const [active, setActive] = useState("All");
 
-  // Build a richer gallery from all categories
-  const allItems = categories.map((cat) => ({
-    id: cat.id,
-    image: cat.image,
-    title: cat.title,
-    filter: cat.filter,
-  }));
-
-  const filtered = active === "All" ? allItems : allItems.filter((item) => item.filter === active);
+  const filtered =
+    active === "All" ? allGalleryImages : allGalleryImages.filter((item) => item.filter === active);
 
   return (
     <div>
@@ -63,7 +56,7 @@ const Gallery = () => {
                 key={item.id}
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: i * 0.05 }}
+                transition={{ delay: i * 0.03 }}
                 className="break-inside-avoid group"
               >
                 <div className="bg-card rounded-xl overflow-hidden shadow-bakery hover:shadow-bakery-lg transition-shadow">
