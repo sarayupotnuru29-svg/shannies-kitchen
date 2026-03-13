@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ShoppingBag } from "lucide-react";
 import { useCart } from "@/context/CartContext";
-import logo from "@/assets/logo.jpeg";
+import logo from "@/assets/shannies_logo.png";
 
 const navLinks = [
   { to: "/", label: "Home" },
