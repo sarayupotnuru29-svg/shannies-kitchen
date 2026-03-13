@@ -4,7 +4,6 @@ import { Heart, Award, Leaf, Truck, Cake, UtensilsCrossed, MapPin, Sparkles } fr
 import { categories } from "@/data/categories";
 import CategoryCard from "@/components/CategoryCard";
 import heroBg from "@/assets/hero-bg.jpg";
-import logo from "@/assets/logo.jpeg";
 import insta1 from "@/assets/insta-1.jpg";
 import insta2 from "@/assets/insta-2.jpg";
 import insta3 from "@/assets/insta-3.jpg";
