@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ShoppingBag, Check } from "lucide-react";
 import { categories } from "@/data/categories";
+import { categoryImages } from "@/data/galleryImages";
 import { useCart } from "@/context/CartContext";
 
 const CategoryDetail = () => {
@@ -22,18 +23,18 @@ const CategoryDetail = () => {
 
   const inCart = isInCart(category.id);
 
-  // Generate placeholder gallery items from the category image
-  const galleryImages = Array.from({ length: 6 }, (_, i) => ({
+  // Get real images for this category
+  const galleryImages = (categoryImages[category.slug] || []).map((img, i) => ({
     id: `${category.id}-${i}`,
-    image: category.image,
-    title: `${category.title} - Item ${i + 1}`,
+    image: img.image,
+    title: img.title,
   }));
 
-  const handleToggleCart = (item: { id: string; title: string }) => {
+  const handleToggleCart = (item: { id: string; title: string; image: string }) => {
     if (isInCart(item.id)) {
       removeItem(item.id);
     } else {
-      addItem({ id: item.id, title: item.title, category: category.title, image: category.image });
+      addItem({ id: item.id, title: item.title, category: category.title, image: item.image });
     }
   };
 
