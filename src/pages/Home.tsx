@@ -82,7 +82,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.65, duration: 0.6 }}
-            className="flex flex-wrap justify-center gap-3 md:gap-5 mb-10"
+            className="flex flex-wrap justify-center gap-3 md:gap-5 md:flex-nowrap mb-10"
           >
             {heroHighlights.map((h) => (
               <div key={h.text} className="flex items-center gap-2 bg-card/10 backdrop-blur-sm border border-primary-foreground/15 rounded-full px-4 py-2">
