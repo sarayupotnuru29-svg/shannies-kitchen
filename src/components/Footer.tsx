@@ -52,15 +52,13 @@ const Footer = () => {
           {/* Categories */}
           <div>
             <h4 className="font-display text-lg mb-4">Categories</h4>
-            <ul className="space-y-2">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-2">
               {categoryLinks.map((link) => (
-                <li key={link.to}>
-                  <Link to={link.to} className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
-                    {link.label}
-                  </Link>
-                </li>
+                <Link key={link.to} to={link.to} className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
+                  {link.label}
+                </Link>
               ))}
-            </ul>
+            </div>
           </div>
 
           {/* Contact */}

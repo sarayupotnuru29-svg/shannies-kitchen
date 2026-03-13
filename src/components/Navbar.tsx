@@ -21,7 +21,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between py-3 px-4">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="Shannies Kitchen" className="h-12 w-auto rounded-lg" />
+          <img src={logo} alt="Shannies Kitchen" className="h-14 md:h-16 w-auto rounded-lg" />
           <div className="hidden sm:block">
             <span className="font-display text-xl font-bold text-secondary">Shannie's</span>
             <span className="block text-xs text-muted-foreground font-body tracking-wider">Healthy Kitchen</span>
