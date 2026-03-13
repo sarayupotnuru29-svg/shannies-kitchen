@@ -82,9 +82,9 @@
   .bg-gradient-hero {
     background: linear-gradient(
       180deg,
-      hsl(var(--brown) / 0.3) 0%,
-      hsl(var(--brown) / 0.55) 40%,
-      hsl(var(--brown) / 0.75) 100%
+      hsl(var(--brown) / 0.15) 0%,
+      hsl(var(--brown) / 0.4) 50%,
+      hsl(var(--brown) / 0.7) 100%
     );
   }
   .bg-gradient-warm {

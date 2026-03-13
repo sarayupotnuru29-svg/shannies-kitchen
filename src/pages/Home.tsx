@@ -38,39 +38,48 @@ const Home = () => {
   return (
     <div>
       {/* Hero */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+      <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
+        <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover scale-105" />
         <div className="absolute inset-0 bg-gradient-hero" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/10" />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-sm md:text-base uppercase tracking-[0.3em] text-primary-foreground/70 font-body mb-3"
-          >
-            Healthy Kitchen • Wholesome Treats
-          </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.35, duration: 0.6 }}
-            className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-2 leading-tight"
+            transition={{ delay: 0.2, duration: 0.7 }}
+            className="font-display text-5xl md:text-7xl font-bold text-white mb-3 drop-shadow-lg"
           >
             Shannie's Kitchen
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.45, duration: 0.6 }}
-            className="font-display text-xl md:text-2xl text-primary-foreground/90 mb-5 leading-tight whitespace-nowrap"
+            transition={{ delay: 0.35, duration: 0.6 }}
+            className="font-body text-base md:text-lg uppercase tracking-[0.25em] text-white/85 mb-6 font-medium"
           >
-            Wholesome Desserts, <span className="text-green-light italic">Crafted with Care</span>
+            Healthy Kitchen • Wholesome Treats
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, scaleX: 0 }}
+            animate={{ opacity: 1, scaleX: 1 }}
+            transition={{ delay: 0.45, duration: 0.5 }}
+            className="w-24 h-[2px] bg-gold mx-auto mb-6"
+          />
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+            className="font-display text-xl md:text-2xl text-white/90 mb-2 leading-snug italic"
+          >
+            Wholesome Desserts, <span className="text-gold">Crafted with Care</span>
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.55, duration: 0.6 }}
-            className="text-base md:text-lg text-primary-foreground/80 font-body max-w-2xl mx-auto mb-8 leading-relaxed"
+            transition={{ delay: 0.6, duration: 0.6 }}
+            className="text-base md:text-lg text-white/80 font-body max-w-2xl mx-auto mb-10 leading-relaxed"
           >
             From custom celebration cakes to guilt-free healthy bakes,
             <br className="hidden md:block" />
@@ -81,13 +90,13 @@ const Home = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.65, duration: 0.6 }}
-            className="flex flex-wrap justify-center gap-3 md:gap-5 md:flex-nowrap mb-10"
+            transition={{ delay: 0.7, duration: 0.6 }}
+            className="flex flex-wrap justify-center gap-3 md:gap-4 md:flex-nowrap mb-12"
           >
             {heroHighlights.map((h) => (
-              <div key={h.text} className="flex items-center gap-2 bg-card/10 backdrop-blur-sm border border-primary-foreground/15 rounded-full px-4 py-2">
-                <h.icon className="h-4 w-4 text-green-light" />
-                <span className="text-xs md:text-sm text-primary-foreground/90 font-body">{h.text}</span>
+              <div key={h.text} className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-2.5 shadow-lg">
+                <h.icon className="h-4 w-4 text-gold" />
+                <span className="text-xs md:text-sm text-white font-body font-medium">{h.text}</span>
               </div>
             ))}
           </motion.div>
@@ -95,12 +104,12 @@ const Home = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.6 }}
+            transition={{ delay: 0.85, duration: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link
               to="/categories"
-              className="bg-primary text-primary-foreground px-8 py-3.5 rounded-full font-body font-medium hover:bg-green-dark transition-colors shadow-bakery-lg text-base"
+              className="bg-primary text-primary-foreground px-10 py-4 rounded-full font-body font-semibold hover:bg-green-dark transition-all shadow-bakery-lg text-base hover:shadow-xl hover:scale-105"
             >
               Explore Our Treats
             </Link>
@@ -108,7 +117,7 @@ const Home = () => {
               href="https://wa.me/919959555466?text=Hello%20Shannies%20Kitchen!"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-card/15 backdrop-blur-sm text-primary-foreground border border-primary-foreground/25 px-8 py-3.5 rounded-full font-body font-medium hover:bg-card/25 transition-colors text-base"
+              className="bg-white/10 backdrop-blur-md text-white border border-white/25 px-10 py-4 rounded-full font-body font-semibold hover:bg-white/20 transition-all text-base hover:scale-105"
             >
               Order via WhatsApp
             </a>
