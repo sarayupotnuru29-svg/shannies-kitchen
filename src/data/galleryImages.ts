@@ -16,6 +16,15 @@ import cake14 from "@/assets/cake14.jpeg";
 import cake15 from "@/assets/cake15.jpeg";
 import cake16 from "@/assets/cake16.jpeg";
 import cake17 from "@/assets/cake17.jpeg";
+import cake18 from "@/assets/cake18.jpeg";
+import cake19 from "@/assets/cake19.jpeg";
+import cake20 from "@/assets/cake21.jpeg";
+import cake21 from "@/assets/cake21.jpeg";
+import cake22 from "@/assets/cake22.jpeg";
+import cake23 from "@/assets/cake23.jpeg";
+import cake24 from "@/assets/cake24.jpeg";
+import cake25 from "@/assets/cake25.jpeg";
+import cake26 from "@/assets/cake26.jpeg";
 
 // === Healthy Bakes ===
 import healthy1 from "@/assets/healthy1.jpeg";
@@ -23,6 +32,8 @@ import healthy2 from "@/assets/healthy2.jpeg";
 import healthythree from "@/assets/healthythree.jpeg";
 import healthy4 from "@/assets/healthy4.jpeg";
 import healthy5 from "@/assets/healthy5.jpeg";
+import healthy6 from "@/assets/healthy6.jpeg";
+import healthy7 from "@/assets/healthy7.jpeg";
 
 // === Corporate / B2B ===
 import Corporate1 from "@/assets/Corporate1.jpeg";
@@ -31,6 +42,8 @@ import Corporate3 from "@/assets/Corporate3.jpeg";
 import Corporate4 from "@/assets/Corporate4.jpeg";
 import Corporatesix from "@/assets/Corporatesix.jpeg";
 import Corporate7 from "@/assets/Corporate7.jpeg";
+import Corporate8 from "@/assets/corporate8.jpeg";
+import Corporate9 from "@/assets/corporate9.jpeg";
 import b2b1 from "@/assets/b2b1.jpeg";
 import b2b2 from "@/assets/b2b2.jpeg";
 import b2b3 from "@/assets/b2b3.jpeg";
@@ -92,6 +105,16 @@ export const categoryImages: Record<string, { image: string; title: string }[]> 
     { image: cake15, title: "Anniversary Cake" },
     { image: cake16, title: "Baby Shower Cake" },
     { image: cake17, title: "Custom Design Cake" },
+    { image: cake18, title: "Pink Ruffle Butterfly Dress Cake" },
+    { image: cake19, title: "Two-Tier Elegant Floral Anniversary Cake" },
+    { image: cake20, title: "Festive Christmas Santa & Snowflake Cake" },
+    { image: cake21, title: "Square Chocolate New Year Cake" },
+    { image: cake22, title: "Square Clock Cake" },
+    { image: cake23, title: "Round Chocolate Star Cake" },
+    { image: cake24, title: "Pink Ombre Butterfly & Crown Cake" },
+    { image: cake25, title: "Black Fondant Lion King Cake with Gold Crown" },
+    { image: cake26, title: "Minimalist White Rosette Cake" },
+
   ],
   "healthy-bakes": [
     { image: healthy1, title: "Oats Cookies" },
@@ -99,13 +122,15 @@ export const categoryImages: Record<string, { image: string; title: string }[]> 
     { image: healthythree, title: "Sugar-Free Brownies" },
     { image: healthy4, title: "Whole Wheat Treats" },
     { image: healthy5, title: "Healthy Granola Bars" },
+    { image: healthy6, title: "White Wheat Cookies" },
+    { image: healthy7, title: "Cream Wheat Cookies" },
   ],
-  "b2b": [
-    { image: b2b1, title: "Bulk Pastry Boxes" },
-    { image: b2b2, title: "Wholesale Cookie Packs" },
-    { image: b2b3, title: "Cafe Supply Trays" },
-    { image: b2b4, title: "Catering Cupcake Platter" },
-  ],
+  // "b2b": [
+  //   { image: b2b1, title: "Bulk Pastry Boxes" },
+  //   { image: b2b2, title: "Wholesale Cookie Packs" },
+  //   { image: b2b3, title: "Cafe Supply Trays" },
+  //   { image: b2b4, title: "Catering Cupcake Platter" },
+  // ],
   "corporate-gifting": [
     { image: Corporate1, title: "Corporate Gift Box" },
     { image: Corporate2, title: "Executive Treat Hamper" },
@@ -113,13 +138,15 @@ export const categoryImages: Record<string, { image: string; title: string }[]> 
     { image: Corporate4, title: "Premium Dessert Box" },
     { image: Corporatesix, title: "Client Appreciation Gift" },
     { image: Corporate7, title: "Employee Reward Box" },
+    { image: Corporate8, title: "Employee Reward Box" },
+    { image: Corporate9, title: "Employee Reward Box" },
   ],
   "festive-hampers": [
-    { image: hamper1, title: "Diwali Hamper" },
-    { image: hamper2, title: "Christmas Gift Box" },
+    { image: hamper1, title: "Rakhi special Hamper" },
+    { image: hamper2, title: "Cradle Ceremony HAmper" },
     { image: hamper3, title: "Festival Sweet Hamper" },
-    { image: hamper4, title: "Eid Celebration Box" },
-    { image: hamper5, title: "Rakhi Special Hamper" },
+    { image: hamper4, title: "Diwali Hamper" },
+    // { image: hamper5, title: "Rakhi Special Hamper" },
     { image: hamper6, title: "New Year Hamper" },
   ],
   "return-gifts": [
@@ -130,17 +157,17 @@ export const categoryImages: Record<string, { image: string; title: string }[]> 
     { image: return5, title: "Baby Shower Favors" },
     { image: return6, title: "Birthday Return Gifts" },
   ],
-  "dessert-table": [
-    { image: dessert1, title: "Wedding Dessert Setup" },
-    { image: dessert2, title: "Grand Dessert Buffet" },
-    { image: dessert3, title: "Birthday Party Table" },
-    { image: dessert4, title: "Garden Party Setup" },
-  ],
+  // "dessert-table": [
+  //   { image: dessert1, title: "Wedding Dessert Setup" },
+  //   { image: dessert2, title: "Grand Dessert Buffet" },
+  //   { image: dessert3, title: "Birthday Party Table" },
+  //   { image: dessert4, title: "Garden Party Setup" },
+  // ],
   "season-specials": [
-    { image: season1, title: "Christmas Gingerbread" },
-    { image: season2, title: "Autumn Pumpkin Cupcakes" },
-    { image: season3, title: "Summer Fruit Tarts" },
-    { image: season4, title: "Monsoon Chocolate Truffles" },
+    // { image: season1, title: "Christmas Gingerbread" },
+    // { image: season2, title: "Autumn Pumpkin Cupcakes" },
+    // { image: season3, title: "Summer Fruit Tarts" },
+    // { image: season4, title: "Monsoon Chocolate Truffles" },
   ],
 };
 

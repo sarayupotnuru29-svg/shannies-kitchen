@@ -1,9 +1,290 @@
+// import { Link } from "react-router-dom";
+// import { motion } from "framer-motion";
+// import { Heart, Award, Leaf, Truck, Cake, UtensilsCrossed, MapPin, Sparkles } from "lucide-react";
+// import { categories } from "@/data/categories";
+// import CategoryCard from "@/components/CategoryCard";
+// import heroBg from "@/assets/hero-bg2.jpeg";
+// import insta1 from "@/assets/insta-1.jpg";
+// import insta2 from "@/assets/insta-2.jpg";
+// import insta3 from "@/assets/insta-3.jpg";
+// import insta4 from "@/assets/insta-4.jpg";
+// import insta5 from "@/assets/insta-5.jpg";
+// import insta6 from "@/assets/insta-6.jpg";
+
+// const reasons = [
+//   { icon: Leaf, title: "100% Wholesome", desc: "Made with natural, healthy ingredients — no preservatives." },
+//   { icon: Heart, title: "Baked with Love", desc: "Every treat is handcrafted with passion and care." },
+//   { icon: Award, title: "Premium Quality", desc: "We use only the finest ingredients for the best taste." },
+//   { icon: Truck, title: "Timely Delivery", desc: "Fresh from our kitchen to your doorstep, always on time." },
+// ];
+
+// const heroHighlights = [
+//   { icon: Cake, text: "Custom Cakes & Desserts" },
+//   { icon: Leaf, text: "Fresh, Natural Ingredients" },
+//   { icon: UtensilsCrossed, text: "Homemade Quality" },
+//   { icon: MapPin, text: "Local Delivery Available" },
+// ];
+
+// const instaImages = [
+//   { src: insta1, alt: "Chocolate drip cake with berries" },
+//   { src: insta2, alt: "Homemade chocolate chip cookies" },
+//   { src: insta3, alt: "Elegant dessert gift box" },
+//   { src: insta4, alt: "Healthy millet muffins" },
+//   { src: insta5, alt: "Dessert table setup" },
+//   { src: insta6, alt: "Festive hamper with sweets" },
+// ];
+
+// const Home = () => {
+//   return (
+//     <div>
+//       {/* Hero */}
+//       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
+//         <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover scale-105" />
+//         <div className="absolute inset-0 bg-gradient-hero" />
+//         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/10" />
+//         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+//           <motion.h1
+//             initial={{ opacity: 0, y: 20 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ delay: 0.2, duration: 0.7 }}
+//             className="font-display text-5xl md:text-7xl font-bold text-white mb-3 drop-shadow-lg"
+//           >
+//             Shannie's Kitchen
+//           </motion.h1>
+//           <motion.p
+//             initial={{ opacity: 0, y: 20 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ delay: 0.35, duration: 0.6 }}
+//             className="font-body text-base md:text-lg uppercase tracking-[0.25em] text-white/85 mb-6 font-medium"
+//           >
+//             Healthy Kitchen • Wholesome Treats
+//           </motion.p>
+
+//           <motion.div
+//             initial={{ opacity: 0, scaleX: 0 }}
+//             animate={{ opacity: 1, scaleX: 1 }}
+//             transition={{ delay: 0.45, duration: 0.5 }}
+//             className="w-24 h-[2px] bg-gold mx-auto mb-6"
+//           />
+
+//           <motion.p
+//             initial={{ opacity: 0, y: 20 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ delay: 0.5, duration: 0.6 }}
+//             className="font-display text-xl md:text-2xl text-white/90 mb-2 leading-snug italic"
+//           >
+//             Wholesome Desserts, <span className="text-gold">Crafted with Care</span>
+//           </motion.p>
+//           <motion.p
+//             initial={{ opacity: 0, y: 20 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ delay: 0.6, duration: 0.6 }}
+//             className="text-base md:text-lg text-white/80 font-body max-w-2xl mx-auto mb-10 leading-relaxed"
+//           >
+//             From custom celebration cakes to guilt-free healthy bakes,
+//             <br className="hidden md:block" />
+//             we bring you handcrafted treats made with the finest natural ingredients — delivered fresh from our Miyapur kitchen.
+//           </motion.p>
+
+//           {/* Feature highlights */}
+//           <motion.div
+//             initial={{ opacity: 0, y: 20 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ delay: 0.7, duration: 0.6 }}
+//             className="flex flex-wrap justify-center gap-3 md:gap-4 md:flex-nowrap mb-12"
+//           >
+//             {heroHighlights.map((h) => (
+//               <div key={h.text} className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-2.5 shadow-lg">
+//                 <h.icon className="h-4 w-4 text-gold" />
+//                 <span className="text-xs md:text-sm text-white font-body font-medium">{h.text}</span>
+//               </div>
+//             ))}
+//           </motion.div>
+
+//           <motion.div
+//             initial={{ opacity: 0, y: 20 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ delay: 0.85, duration: 0.6 }}
+//             className="flex flex-col sm:flex-row gap-4 justify-center"
+//           >
+//             <Link
+//               to="/categories"
+//               className="bg-primary text-primary-foreground px-10 py-4 rounded-full font-body font-semibold hover:bg-green-dark transition-all shadow-bakery-lg text-base hover:shadow-xl hover:scale-105"
+//             >
+//               Explore Our Treats
+//             </Link>
+//             <a
+//               href="https://wa.me/919959555466?text=Hello%20Shannies%20Kitchen!"
+//               target="_blank"
+//               rel="noopener noreferrer"
+//               className="bg-white/10 backdrop-blur-md text-white border border-white/25 px-10 py-4 rounded-full font-body font-semibold hover:bg-white/20 transition-all text-base hover:scale-105"
+//             >
+//               Order via WhatsApp
+//             </a>
+//           </motion.div>
+//         </div>
+//       </section>
+
+//       {/* About */}
+//       <section className="py-20 bg-gradient-warm">
+//         <div className="container mx-auto px-4 max-w-4xl text-center">
+//           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+//             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">About Shannie's Kitchen</h2>
+//             <p className="text-muted-foreground leading-relaxed text-lg">
+//               Born from a passion for healthy, homemade goodness, Shannie's Kitchen brings you wholesome treats
+//               crafted with the finest natural ingredients. From custom celebration cakes to guilt-free healthy bakes,
+//               every creation is made with love in our Miyapur kitchen. We believe that good food should be both
+//               delicious and nourishing — and that's exactly what we deliver.
+//             </p>
+//           </motion.div>
+//         </div>
+//       </section>
+
+//       {/* Featured Categories */}
+//       <section className="py-20">
+//         <div className="container mx-auto px-4">
+//           <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-12">
+//             Our Specialties
+//           </h2>
+//           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+//             {categories.slice(0, 4).map((cat, i) => (
+//               <CategoryCard key={cat.id} category={cat} index={i} />
+//             ))}
+//           </div>
+//           <div className="text-center mt-10">
+//             <Link
+//               to="/categories"
+//               className="inline-block bg-secondary text-secondary-foreground px-8 py-3 rounded-full font-body font-medium hover:bg-brown-dark transition-colors"
+//             >
+//               View All Categories
+//             </Link>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Why Choose Us */}
+//       <section className="py-20 bg-accent">
+//         <div className="container mx-auto px-4">
+//           <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-12">
+//             Why Choose Us
+//           </h2>
+//           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+//             {reasons.map((r, i) => (
+//               <motion.div
+//                 key={r.title}
+//                 initial={{ opacity: 0, y: 20 }}
+//                 whileInView={{ opacity: 1, y: 0 }}
+//                 viewport={{ once: true }}
+//                 transition={{ delay: i * 0.1 }}
+//                 className="text-center"
+//               >
+//                 <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+//                   <r.icon className="h-7 w-7 text-primary" />
+//                 </div>
+//                 <h3 className="font-display text-lg font-semibold text-foreground mb-2">{r.title}</h3>
+//                 <p className="text-sm text-muted-foreground">{r.desc}</p>
+//               </motion.div>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Instagram Preview */}
+//       <section className="py-20">
+//         <div className="container mx-auto px-4 text-center">
+//           <motion.div
+//             initial={{ opacity: 0, y: 20 }}
+//             whileInView={{ opacity: 1, y: 0 }}
+//             viewport={{ once: true }}
+//           >
+//             <Sparkles className="h-6 w-6 text-gold mx-auto mb-3" />
+//             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
+//               Follow Us on Instagram
+//             </h2>
+//             <p className="text-muted-foreground mb-2">See our latest creations</p>
+//             <a
+//               href="https://www.instagram.com/shannies_kitchen/"
+//               target="_blank"
+//               rel="noopener noreferrer"
+//               className="inline-block text-primary font-body font-semibold hover:underline mb-10 text-lg"
+//             >
+//               @shannies_kitchen →
+//             </a>
+//           </motion.div>
+//           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+//             {instaImages.map((img, i) => (
+//               <motion.div
+//                 key={i}
+//                 initial={{ opacity: 0, scale: 0.95 }}
+//                 whileInView={{ opacity: 1, scale: 1 }}
+//                 viewport={{ once: true }}
+//                 transition={{ delay: i * 0.08 }}
+//                 className="aspect-square rounded-xl overflow-hidden shadow-bakery"
+//               >
+//                 <img
+//                   src={img.src}
+//                   alt={img.alt}
+//                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+//                   loading="lazy"
+//                 />
+//               </motion.div>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Customer Love */}
+//       <section className="py-20 bg-accent">
+//         <div className="container mx-auto px-4 text-center max-w-4xl">
+//           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-12">Customer Love</h2>
+//           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+//             {[
+//               { name: "Priya S.", text: "The healthiest cakes I've ever tasted! My kids love them." },
+//               { name: "Rahul M.", text: "Perfect corporate gift boxes. Our clients were thrilled!" },
+//               { name: "Ananya K.", text: "The festive hampers were gorgeous. Will order again!" },
+//             ].map((t, i) => (
+//               <motion.div
+//                 key={i}
+//                 initial={{ opacity: 0, y: 20 }}
+//                 whileInView={{ opacity: 1, y: 0 }}
+//                 viewport={{ once: true }}
+//                 transition={{ delay: i * 0.15 }}
+//                 className="bg-card rounded-xl p-6 shadow-bakery"
+//               >
+//                 <p className="text-muted-foreground italic mb-4">"{t.text}"</p>
+//                 <p className="font-display font-semibold text-foreground">— {t.name}</p>
+//               </motion.div>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* CTA */}
+//       <section className="py-16 bg-secondary">
+//         <div className="container mx-auto px-4 text-center">
+//           <h2 className="font-display text-3xl font-bold text-secondary-foreground mb-4">Ready to Order?</h2>
+//           <p className="text-secondary-foreground/70 mb-8">Send us a message on WhatsApp and let's create something delicious!</p>
+//           <a
+//             href="https://wa.me/919959555466?text=Hello%20Shannies%20Kitchen!"
+//             target="_blank"
+//             rel="noopener noreferrer"
+//             className="inline-block bg-primary text-primary-foreground px-10 py-4 rounded-full font-body font-medium text-lg hover:bg-green-dark transition-colors shadow-bakery"
+//           >
+//             Order via WhatsApp
+//           </a>
+//         </div>
+//       </section>
+//     </div>
+//   );
+// };
+
+// export default Home;
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Heart, Award, Leaf, Truck, Cake, UtensilsCrossed, MapPin, Sparkles } from "lucide-react";
+import { Heart, Award, Leaf, Truck, Cake, UtensilsCrossed, MapPin, Sparkles, ChevronRight } from "lucide-react";
 import { categories } from "@/data/categories";
 import CategoryCard from "@/components/CategoryCard";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-bg2.jpeg";
 import insta1 from "@/assets/insta-1.jpg";
 import insta2 from "@/assets/insta-2.jpg";
 import insta3 from "@/assets/insta-3.jpg";
@@ -36,92 +317,85 @@ const instaImages = [
 
 const Home = () => {
   return (
-    <div>
-      {/* Hero */}
-      <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
-        <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover scale-105" />
-        <div className="absolute inset-0 bg-gradient-hero" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/10" />
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.7 }}
-            className="font-display text-5xl md:text-7xl font-bold text-white mb-3 drop-shadow-lg"
-          >
-            Shannie's Kitchen
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.35, duration: 0.6 }}
-            className="font-body text-base md:text-lg uppercase tracking-[0.25em] text-white/85 mb-6 font-medium"
-          >
-            Healthy Kitchen • Wholesome Treats
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, scaleX: 0 }}
-            animate={{ opacity: 1, scaleX: 1 }}
-            transition={{ delay: 0.45, duration: 0.5 }}
-            className="w-24 h-[2px] bg-gold mx-auto mb-6"
+    <div className="overflow-x-hidden">
+      {/* --- NEW REDESIGNED HERO SECTION --- */}
+      <section className="relative min-h-[92vh] flex items-center pt-16">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={heroBg} 
+            alt="Bakery Hero" 
+            className="w-full h-full object-cover object-center scale-105" 
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
+        </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-            className="font-display text-xl md:text-2xl text-white/90 mb-2 leading-snug italic"
-          >
-            Wholesome Desserts, <span className="text-gold">Crafted with Care</span>
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            className="text-base md:text-lg text-white/80 font-body max-w-2xl mx-auto mb-10 leading-relaxed"
-          >
-            From custom celebration cakes to guilt-free healthy bakes,
-            <br className="hidden md:block" />
-            we bring you handcrafted treats made with the finest natural ingredients — delivered fresh from our Miyapur kitchen.
-          </motion.p>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-2xl">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="h-[1px] w-12 bg-white/40"></span>
+                  <span className="text-white/90 font-body tracking-[0.3em] text-xs md:text-sm font-bold uppercase">
+                    Healthy Kitchen • Wholesome Treats
+                  </span>
+                </div>
 
-          {/* Feature highlights */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.6 }}
-            className="flex flex-wrap justify-center gap-3 md:gap-4 md:flex-nowrap mb-12"
-          >
-            {heroHighlights.map((h) => (
-              <div key={h.text} className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-2.5 shadow-lg">
-                <h.icon className="h-4 w-4 text-gold" />
-                <span className="text-xs md:text-sm text-white font-body font-medium">{h.text}</span>
-              </div>
-            ))}
-          </motion.div>
+                {/* --- Shannie's Kitchen in a single line --- */}
+                <h1 className="font-display text-5xl md:text-7xl text-white font-bold leading-tight mb-6 drop-shadow-xl whitespace-nowrap">
+                  Shannie's Kitchen
+                </h1>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.85, duration: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <Link
-              to="/categories"
-              className="bg-primary text-primary-foreground px-10 py-4 rounded-full font-body font-semibold hover:bg-green-dark transition-all shadow-bakery-lg text-base hover:shadow-xl hover:scale-105"
-            >
-              Explore Our Treats
-            </Link>
-            <a
-              href="https://wa.me/919959555466?text=Hello%20Shannies%20Kitchen!"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white/10 backdrop-blur-md text-white border border-white/25 px-10 py-4 rounded-full font-body font-semibold hover:bg-white/20 transition-all text-base hover:scale-105"
-            >
-              Order via WhatsApp
-            </a>
-          </motion.div>
+                <p className="font-display text-xl md:text-2xl text-white/90 mb-4 italic">
+                   Wholesome Desserts, <span className="text-white font-bold underline decoration-white/30">Crafted with Care</span>
+                </p>
+                
+                <p className="text-base md:text-lg text-white/80 font-body max-w-lg mb-10 leading-relaxed">
+                  From custom celebration cakes to guilt-free healthy bakes, we bring you handcrafted treats made with the finest natural ingredients — delivered fresh from our Miyapur kitchen.
+                </p>
+
+                {/* Feature Highlights Grid */}
+                <div className="flex flex-wrap gap-3 mb-10">
+                  {heroHighlights.map((item, i) => (
+                    <motion.div 
+                      key={item.text}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.5 + (i * 0.1) }}
+                      className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full"
+                    >
+                      <item.icon className="w-4 h-4 text-white" />
+                      <span className="text-white text-xs md:text-sm font-medium">{item.text}</span>
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* CTA Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link
+                    to="/categories"
+                    className="bg-primary text-primary-foreground px-10 py-4 rounded-full font-body font-semibold hover:bg-green-dark transition-all shadow-bakery-lg text-base hover:scale-105 flex items-center justify-center gap-2"
+                  >
+                    Explore Our Treats
+                    <ChevronRight className="w-5 h-5" />
+                  </Link>
+                  
+                  <a
+                    href="https://wa.me/919959555466?text=Hello%20Shannies%20Kitchen!"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white/10 backdrop-blur-md text-white border border-white/25 px-10 py-4 rounded-full font-body font-semibold hover:bg-white/20 transition-all text-base hover:scale-105 flex items-center justify-center"
+                  >
+                    Order via WhatsApp
+                  </a>
+                </div>
+              </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
