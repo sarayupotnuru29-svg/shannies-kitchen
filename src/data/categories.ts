@@ -39,7 +39,7 @@ export const categories: Category[] = [
   {
     id: "b2b",
     slug: "b2b",
-    title: "B2B",
+    title: "Brownies",
     description: "Bulk bakery supplies for cafés, restaurants, and food businesses — consistent quality, on time.",
     longDescription: "Partner with Shannies Kitchen for reliable, high-quality bakery supply. We offer customized bulk orders for cafés, restaurants, cloud kitchens, and retail stores with consistent taste and timely delivery.",
     image: b2bImg,

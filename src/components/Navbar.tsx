@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ShoppingBag } from "lucide-react";
 import { useCart } from "@/context/CartContext";
@@ -16,16 +16,27 @@ const Navbar = () => {
   const location = useLocation();
   const { itemCount } = useCart();
 
+  // Close mobile menu if window is resized to desktop
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-md shadow-bakery">
       <div className="container mx-auto flex items-center justify-between py-3 px-4">
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="Shannies Kitchen" className="h-14 md:h-16 w-auto rounded-lg" />
-          <div className="hidden sm:block">
-            <span className="font-display text-xl font-bold text-secondary">Shannie's</span>
-            <span className="block text-xs text-muted-foreground font-body tracking-wider">Healthy Kitchen</span>
-          </div>
+        {/* Logo (Text Removed) */}
+        <Link to="/" className="flex items-center">
+          <img 
+            src={logo} 
+            alt="Shannies Kitchen" 
+            className="h-14 md:h-16 w-auto rounded-lg transition-transform hover:scale-105" 
+          />
         </Link>
 
         {/* Desktop Links */}
@@ -51,7 +62,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Mobile */}
+        {/* Mobile Controls */}
         <div className="flex items-center gap-4 md:hidden">
           <Link to="/cart" className="relative">
             <ShoppingBag className="h-5 w-5 text-foreground/80" />
@@ -61,7 +72,11 @@ const Navbar = () => {
               </span>
             )}
           </Link>
-          <button onClick={() => setOpen(!open)} className="text-foreground">
+          <button 
+            onClick={() => setOpen(!open)} 
+            className="text-foreground p-1"
+            aria-label="Toggle Menu"
+          >
             {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
@@ -69,7 +84,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden bg-card border-t border-border px-4 pb-4">
+        <div className="md:hidden bg-card border-t border-border px-4 pb-4 animate-in fade-in slide-in-from-top-2">
           {navLinks.map((link) => (
             <Link
               key={link.to}
