@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 const Categories = () => {
   return (
-    <div>
-      {/* Hero */}
+    <div className="min-h-screen bg-background">
+      {/* Hero Section */}
       <section className="py-16 bg-accent text-center">
         <div className="container mx-auto px-4">
           <motion.h1
@@ -21,7 +21,7 @@ const Categories = () => {
         </div>
       </section>
 
-      {/* Grid */}
+      {/* Grid Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
